@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JawaPos.com </title>
+    <link rel="icon" href="/asset/jawapost.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', 'Roboto', sans-serif;
+        }
+        
+        #container-utama{
+            overflow-x: hidden;
+        }
+        #header{
+            height: 180px;
+            width: 100%;
+            /* border: 1px black solid; */
+        }
+        .logo1{
+            width: 418px;
+            height: 128px;
+            margin-left: 40px;
+        }
+        #live{
+            width: max-content;
+            text-align: center;
+            border: 2px solid rgba(122, 122, 122, 0.6);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+        }
+        #live > h2{
+            margin-top: 5px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+        }
+        #header-content > h2{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+        }
+        #bar-menu{
+            width: max-content;
+            height: 35px;
+            /* border: 1px black solid; */
+        }
+        #bar-menu > span:nth-child(1){
+            width: 59.63px;
+            border: 3px black solid;
+            height: 0px;
+            background-color: black;
+        }
+        #bar-menu > span:nth-child(2){
+            width: 48.45px;
+            border: 3px black solid;
+            height: 0px;
+            background-color: black;
+        }
+        #bar-menu > span:nth-child(3){
+            width: 40.99px;
+            border: 3px black solid;
+            height: 0px;
+            background-color: black;
+        }
+        /* SWITCH */
+        #information{
+            height: 50px;
+            width: 100%;
+        }
+        #information > div:nth-child(1){
+            color: white;
+            background: #0087D1;
+        }
+        #information > div:nth-child(2){
+            color: white;
+            background: rgba(63, 63, 63, 0.8);
+            
+        }
+        #information > div:nth-child(2) > h4{
+            font-family: 'Bebas Neue';
+            color: white;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+        }
+         /* SWITCH */
+        #headline{
+            width: 100%;
+            height: 850px;
+            background-image:url(/asset/HEADLINE-IMAGE.png);
+            background-size: cover;
+        }
+        #headline > div:nth-child(1){
+            color: white;
+        }
+        #headline > div:nth-child(1) > h2{
+            font-size: 40px;
+            line-height: 60px;
+            font-weight: 700;
+
+        }
+        #headline > div:nth-child(1) > h5{
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 38px;
+            text-align: right;
+            letter-spacing: 0.1em;
+
+            color: rgba(255, 255, 255, 0.8);
+
+        }
+        #headline > div:nth-child(2) > div{
+            color: white;
+            background: #004468;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        #selengkapnya{
+            font-weight: 700;
+        }
+        #headline > div:nth-child(3){
+            height: 145px;
+            background: rgba(44, 44, 44, 0.7);
+        }
+        #headline > div:nth-child(3) > div{
+            color: white;
+        }
+        #headline > div:nth-child(3) > div > h1{
+            font-weight: 900;
+            font-size: 55px;
+        }
+        #headline > div:nth-child(3) > div > p{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+        }
+         /* SWITCH */
+        #new > h1{
+            font-weight: 700;
+            margin-left: 170px;
+        }
+        #new-content-1{
+            background-image: url(/asset/Rectangle\ 13-1.png);
+            background-size: cover;
+            width: 1245px;
+            height: 750px;
+        }
+        #new-content-1 > div{
+            width: 1245px;
+            height: 213px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 0px 0px 24px 24px;
+            color: white;
+        }
+        #new-content-1 > div > h2{
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 52px;
+        }
+        #new-content-1 > div > p{
+            font-size: 30px;
+            font-weight: 400;
+        }
+        #new-content-1{
+            transition: all .2s;
+        }
+        #new-content-1:hover{
+            transform: scale(1.05);
+        }
+        #new-content-2 > div:nth-child(1){
+            background-image: url(/asset/Rectangle\ 13-1.png);
+            background-size: cover;
+            width: 445px;
+            height: 350px;
+            color: white;
+        }
+        #new-content-2 > div:nth-child(1) > div{
+            width: 445px;
+            height: 146px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #new-content-2 > div:nth-child(1) > div > h3{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        #new-content-2 > div:nth-child(1) > div > p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        #new-content-2 > div:nth-child(2){
+            background-image: url(./asset/Rectangle\ 13-2.png);
+            background-size: cover;
+            width: 445px;
+            height: 350px;
+            color: white;
+        }
+        #new-content-2 > div:nth-child(2) > div{
+            width: 445px;
+            height: 146px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #new-content-2 > div:nth-child(2) > div > h3{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        #new-content-2 > div:nth-child(2) > div > p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        #new-content-2 > div{
+            transition: all .2s;
+        }
+        #new-content-2 > div:hover{
+            transform: scale(1.05);
+        }
+        /* SWITCH */
+        #trending{
+            height: 1080px;
+            background: rgba(0, 137, 209, 0.13);
+        }
+        #trending > h1{
+            font-size: 50px;
+            font-weight: 700;
+        }
+        #trending-content > div > div > h1{
+            font-size: 50px;
+            font-weight: 700;
+        }
+        #trending-content > div > div > p{
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 48px;
+        }
+        #trending-content > div > div:nth-child(2){
+            border: 1px solid rgba(122, 122, 122, 0.8);;
+        } 
+        #tags-content{
+            color: white;
+            background: #004468;
+            border: 1px solid #FBFEFF;
+            border-radius: 25px;
+            transition: all .2s ;
+        }
+        #tags-content > h2{
+            font-weight: 700;
+            font-size: 30px;
+        }
+        #tags-content:hover{
+            transform: scale(1.1);
+        }
+        /* SWITCH */
+        #most-read > h1{
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 82px;
+        }
+        #most-read > div > div{
+            transition: all .2s ;
+        }
+        #most-read > div > div:hover{
+            transform: scale(1.04);
+        }
+        #most-read-contents-1{
+            width: 300px;
+            height: 460px;
+            background-image: url(/asset/gambar-kebakaran.png);
+        }
+        #most-read-contents-1 > div{
+            height: max-content;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 43.23%);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #most-read-contents-1 > div > h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        #most-read-contents-1 > div > p{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        #most-read-contents-2{
+            width: 300px;
+            height: 460px;
+            background-image: url(/asset/gambar-memupuk.png);
+        }
+        #most-read-contents-2 > div{
+            height: max-content;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 43.23%);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #most-read-contents-2 > div > h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        #most-read-contents-2 > div > p{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        #most-read-contents-3{
+            width: 300px;
+            height: 460px;
+            background-image: url(/asset/gambar-balita.png)
+        }
+        #most-read-contents-3 > div{
+            height: max-content;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 43.23%);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #most-read-contents-3 > div > h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        #most-read-contents-3 > div > p{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        #most-read-contents-4{
+            width: 300px;
+            height: 460px;
+            background-image: url(/asset/gambar-bin.png);
+        }
+        #most-read-contents-4 > div{
+            height: max-content;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 43.23%);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #most-read-contents-4 > div > h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        #most-read-contents-4 > div > p{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        #most-read-contents-5{
+            width: 300px;
+            height: 460px;
+            background-image: url(/asset/gambar-zulhas.png);
+        }
+        #most-read-contents-5 > div{
+            height: max-content;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 43.23%);
+            border-radius: 0px 0px 24px 24px;
+        }
+        #most-read-contents-5 > div > h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        #most-read-contents-5 > div > p{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        /* SWITCH */
+        #footer{
+            height: 200px;
+            background: #0089D1;
+            box-shadow: 0px -15px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        #logoes{
+            border-left: 2px white solid;
+            height: 70%;
+
+        }
+        #footer > h3{
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 38px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center" id="container-utama">
+        <div class="d-flex d-flex-row justify-content-between align-items-center" id="header">
+            <img src="/Image/jawapost.png" alt="JawaPos.com" class="logo1">
+            <div class="d-flex d-flex-row align-items-center pr-5" id="header-content">
+                <div class="container mr-5" id="live">
+                    <h2 class="px-3">
+                        LIVE
+                    </h2>
+                </div>
+                <h2 class="px-4">BERITA TERBARU</h2>
+                <h2 class="px-4">TRENDING</h2>
+                <h2 class="px-5">MOST READ</h2>
+                <div class="d-flex flex-column justify-content-between align-items-end px-3" id="bar-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex d-flex-row justify-content-start m-0 p-0" id="information">
+            <div class="d-flex d-flex-row px-5 text-center align-items-center">
+                <h4 class="pt-2 px-5">JAWA TIMUR</h4>
+            </div>
+            <div class="d-flex d-flex-row flex-grow-1 align-items-center">
+                <h4 class="pt-2 pl-5">Puluhan Siswa Jadi Korban Jembatan Putus, BPBD: 13 Siswa Dirujuk ke RS</h4>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-end align-items-end" id="headline">
+            <div class="d-flex flex-column justify-content-end align-items-end w-50 pl-5 pr-3 mr-5">
+                <h2 class="text-right mr-5 pl-5 ml-5">
+                    Surabaya Terus Bertumbuh, <br> Banyak Kota di Dunia Ingin <br> Jalin Kerja Sama
+                </h2>
+                <h5 class="mr-5">
+                    JAWA TIMUR     |     1 JAM LALU
+                </h5>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-end py-5 pr-5 mr-5 ">
+                <div class="container px-5 py-2 my-5">
+                    <h3 class="text-center pt-2" id="selengkapnya">
+                        SELENGKAPNYA >
+                    </h3>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-5">
+                <div class="container">
+                    <h1 class="pl-5 pt-2">
+                        HEADLINE
+                    </h1>
+                </div>
+                <div class="container border-left border-white h-50">
+                    <p>
+                        Surabaya Terus Bertumbuh, <br>Banyak Kota di Dunia Ingin <br>Jalin Kerja Sama
+                    </p>
+                </div>
+                <div class="container border-left border-white h-50">
+                    <p>
+                        Polda Metro Jaya sudah <br>Limpahkan Kasus Roy Suryo <br>ke Kejaksaan
+                    </p>
+                </div>
+                <div class="container border-left border-white h-50">
+                    <p>
+                        Moeldoko Sebut Penerapan <br>Inpres Mobil Listrik Dilakukan <br>Bertahap
+                    </p>
+                </div>
+                <div class="container border-left border-white h-50">
+                    <p>
+                        Bisakah UU PDP Tekan Potensi <br>Kebocoran Data? 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-center pt-5" id="new">
+            <h1 class="text-start w-100 py-2">
+                BERITA TERBARU
+            </h1>
+            <div class="d-flex flex-row justify-content-center" id="new-content">
+                <div class="d-flex flex-column justify-content-end" id="new-content-1" >
+                    <div class="d-flex flex-column align-self-end justify-content-start">
+                        <h2 class="px-5 pt-3">
+                            Presiden Jokowi Bilang Tak Perlu Ragu dan <br>Bimbang dengan IKN
+                        </h2>
+                        <p class="px-5">
+                            11 September 2022, 15.48 WIB
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-between px-5 w-25" id="new-content-2">
+                    <div class="d-flex flex-column justify-content-end">
+                        <div class="d-flex flex-column align-self-end justify-content-start">
+                            <h3 class="px-5 pt-3">
+                                Bangkit saat Kritis, Fajar/Rian Sikat Ganda Korsel, Lolos 8 Besar
+                            </h3>
+                            <p class="px-5">
+                                11 September 2022, 15.48 WIB
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column justify-content-end">
+                        <div class="d-flex flex-column align-self-end justify-content-start">
+                            <h3 class="px-5 pt-3">
+                                E-Sports Makin Dilirik, PBESI: Lebih dari Sekadar Main Game
+                            </h3>
+                            <p class="px-5">
+                                11 September 2022, 15.48 WIB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-start align-items-center text-center py-5 my-5" id="trending">
+            <h1 class="my-5">
+                TRENDING
+            </h1>
+            <div class="d-flex flex-row" id="trending-content">
+                <div class="d-flex flex-row text-center">
+                    <div class="text-center mx-5 px-5">
+                        <h1 class="mb-5">
+                            NEWS WAVE
+                        </h1>
+                        <p>
+                            1. 77 Tahun Kemerdekaan <br>
+                            2. Polisi Tembak Polisi <br>
+                            3. Gerai - Gerai Holywings Tutup <br>
+                            4. Kehidupan Anak Manusia Silver <br>
+                            5. Kontroversi Dana Umat di ACT <br>
+                            6. RR Bongkar Skenario Sambo <br>
+                            7. Hasil Otopsi Santri Gontor <br>
+                            8. Kebocoran Data Pemerintah <br>
+                            9. Bripka RR Terima Rp 1 Miliar <br>
+                            10. Ratu Elizabeth Meninggal <br>
+                        </p>
+                    </div>
+                    <div class="h-100 w-0 mx-5"></div>
+                    <div class="d-flex flex-column text-center ">
+                        <h1 class="mb-5">
+                            TAGS
+                        </h1>
+                        <div class="d-flex flex-row justify-content-center my-3">
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Brigadir J
+                                </h2>
+                            </div>
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Ferdy Sambo
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center my-3">
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Bharada E
+                                </h2>
+                            </div>
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Skenario Sambo
+                                </h2>
+                            </div>
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Apple
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center my-3">
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Bripka Ricky Rizal
+                                </h2>
+                            </div>
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    PILPRES 2024
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center my-3">
+                            <div class="text-center mx-3" id="tags-content">
+                                <h2 class="px-4 mt-2">
+                                    Ratu Elizabeth Meninggal
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-start align-items-center text-center my-5" id="most-read">
+            <h1>
+                MOST READ
+            </h1>
+            <div class="d-flex flex-row justify-content-around align-items-center my-5">
+                <div class="mx-4 d-flex flex-column justify-content-end" id="most-read-contents-1" >
+                    <div class="d-flex flex-column align-self-end justify-content-start align-items-start w-100">
+                        <h3 class="pt-5 ml-3 text-left">
+                           
+                            Sering Kebakaran, Pemkot Ingin Beli Alat Canggih Ini, Harganya Rp 33 M
+                        </h3>
+                        <p class="ml-3 text-left">
+                            1 Jam Lalu
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-4 d-flex flex-column justify-content-end" id="most-read-contents-2" >
+                    <div class="d-flex flex-column align-self-end justify-content-start align-items-start w-100">
+                        <h3 class="pt-5 ml-3 text-left">
+                            Memupuk Jiwa Toleran dalam Kehidupan Berbangsa dan Bernegara
+                        </h3>
+                        <p class="ml-3 text-left">
+                            2 Jam Lalu
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-4 d-flex flex-column justify-content-end" id="most-read-contents-3" >
+                    <div class="d-flex flex-column align-self-end justify-content-start align-items-start w-100">
+                        <h3 class="pt-5 ml-3 text-left">
+                            Ada 13 Balita di Surabaya-Malang Meninggal karena Gangguan Ginjal Akut
+                        </h3>
+                        <p class="ml-3 text-left">
+                            2 Jam Lalu
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-4 d-flex flex-column justify-content-end" id="most-read-contents-4" >
+                    <div class="d-flex flex-column align-self-end justify-content-start align-items-start w-100">
+                        <h3 class="pt-5 ml-3 text-left">
+                            BIN Dorong Pemuda Papua Jadi Solusi Bagi Petani Buat Ketahanan Pangan
+                        </h3>
+                        <p class="ml-3 text-left">
+                            2 Jam Lalu
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-4 d-flex flex-column justify-content-end" id="most-read-contents-5" >
+                    <div class="d-flex flex-column align-self-end justify-content-start align-items-start w-100">
+                        <h3 class="pt-5 ml-3 text-left">
+                            Zulhas Pastikan Akan Terus Buka Pasar UKM Pangan Indonesia Mendunia
+                        </h3>
+                        <p class="ml-3 text-left">
+                            2 Jam Lalu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row justify-content-around align-items-center" id="footer">
+            <h3>
+                © PT Jawa Pos Grup Multimedia
+            </h3>
+            <div class="d-flex flex-row align-items-center" id="logoes">
+                <img src="" alt="" class="mx-3">
+                <img src="/image/image 10.png" alt="" class="mx-3">
+                <img src="/image/image 11.png" alt="" class="mx-3">
+                <img src="/image/image 12.png" alt="" class="mx-3">
+                <img src="/image/image 13.png" alt="" class="mx-3">
+            </div>
+            <h3>
+                REDAKSI
+            </h3>
+            <h3>
+                ABOUT US
+            </h3>
+            <h3>
+                PRIVACY POLICY
+            </h3>
+            <h3>
+                KARIR
+            </h3>
+        </div>
+    </div>
+</body>
+</html>
